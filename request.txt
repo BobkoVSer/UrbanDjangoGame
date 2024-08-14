@@ -1,0 +1,10 @@
+ buyer1 = Buyer.objects.create(name='Art', balance=12.5, age=12)
+buyer2 = Buyer.objects.create(name='Nik', balance=33.5, age=33)
+buyer3 = Buyer.objects.create(name='Dav', balance=44.5, age=19)
+game1 = Game.objects.create(title='Tanks', cost=5, size=0.5, description='Old Game', age_limitied=True)
+game2 = Game.objects.create(title='Call of Duty', cost=22, size=5.5, description='Game', age_limitied=False)
+game3 = Game.objects.create(title='GTA V', cost=33, size=6.6, description='NewGame', age_limitied=True)
+game2.buyers.set([buyer1, buyer2,buyer3])
+game1.buyers.set([buyer2, buyer3])
+game3.buyers.set([buyer3])
+
